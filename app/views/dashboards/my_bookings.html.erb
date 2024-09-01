@@ -1,0 +1,68 @@
+<div class="card-booking">
+  <img src="https://t4.ftcdn.net/jpg/05/21/18/03/360_F_521180377_2iAVJqBQSo3cgKaVp8vMBR8asrC61DoU.jpg" />
+  <div class="card-booking-infos">
+  </div>
+</div>
+
+<div class="d-flex justify-content-evenly m-3">
+  <button class="btn btn-ghost" type="button" data-bs-toggle="collapse" data-bs-target="#offers_bookings" aria-expanded="false" aria-controls="collapseExample">
+    <h2> My booking status</h2>
+  </button>
+
+  <button class="btn btn-ghost" type="button" data-bs-toggle="collapse" data-bs-target="#bookings" aria-expanded="false" aria-controls="collapseExample">
+    <h2> My booking</h2>
+  </button>
+
+  <button class="btn btn-ghost" type="button" data-bs-toggle="collapse" data-bs-target="#offers" aria-expanded="false" aria-controls="collapseExample">
+    <h2> All my offers</h2>
+  </button>
+</div>
+
+
+<div class="collapse m-2" id="offers_bookings">
+  <div class="card card-body">
+    <div class="items-card">
+      <div class="row">
+        <% @offers_bookings.each do |booking| %>
+          <%= render partial: "dashboards/booking", locals: { can_accept: true, booking: booking } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="collapse m-2" id="bookings">
+  <div class="card card-body">
+    <div class="items-card">
+      <div class="row">
+        <% @bookings.each do |booking| %>
+          <%= render partial: "dashboards/booking", locals: { can_accept: false, booking: booking } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="collapse m-2" id="offers">
+  <div class="card card-body">
+    <div class="items-card">
+      <div class="row">
+        <% @my_offers.each do |offer| %>
+          <%= render 'dashboards/offer', offer: offer %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>

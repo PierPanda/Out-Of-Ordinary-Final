@@ -1,0 +1,14 @@
+<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+  <div class="container-card">
+    <div class="cards-offer card-cover rounded-4 shadow-lg">
+        <img src="<%= offer.photo.attached? ? cl_image_path(offer.photo.key) : 'https://mrwallpaper.com/images/hd/ios-13-dark-default-b87pdhc857zkxftr.jpg' %>", height='300px'>
+      <div class="card-dashboard-infos">
+        <h2 class="text-truncate p-2"><%= offer.title %></h2>
+        <p class="p-3"><strong><%= offer.description %></strong> € </p>
+        <p class="p-3"><%= offer.price %> € </p>
+        <p class="p-3"><%= offer.address %></p>
+        <p class="p-3">For <%= offer.places %> pers</p>
+      </div>
+    </div>
+  </div>
+</div>

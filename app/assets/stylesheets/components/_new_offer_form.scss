@@ -1,0 +1,63 @@
+.container-new {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: $text;
+  font-size: 24px;
+}
+
+.feedback-form {
+  align-items: center;
+  width: 400px;
+  background-color: $background;
+  padding: 20px 50px 40px;
+  box-shadow: 1px 4px 10px 1px $primary;
+  border-radius: 15px;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+.feedback-form * {
+  color: $text;
+    box-sizing: border-box;
+}
+
+.feedback-form h2{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+#offer_description{
+  color: $text;
+  font-size: 24px;
+}
+
+.feedback-form input:not([type="submit"]) {
+  color: $text;
+  display: block;
+  height: 32px;
+  padding: 6px 16px;
+  width: 100%;
+  border: none;
+  margin-bottom: 15px;
+  background-color: #f3f3f3;
+  font-size: 24px;
+}
+
+.feedback-form label {
+  color: $text;
+  font-size: 24px;
+}
+
+.feedback-form .btn {
+  color: white;
+  display: block;
+  margin: 20px auto 0;
+  width: 180px;
+  height: 60px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 700;
+  box-shadow: 1px 4px 10px 0.5px #aaa;
+  font-size: 24px;
+}

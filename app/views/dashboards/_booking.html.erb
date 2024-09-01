@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="text-truncate p-2"><%= booking.offer.title %></h2>
+  <p><strong><%= booking.total_prices %></strong> € </p>
+  <p>From <%= booking.date_start %> to <%= booking.date_end%></p>
+  <p>For <%= booking.number_of_persons %> 👫👬👭</p>
+  <% if can_accept %>
+    <% if booking.accepted %>
+      <button class="btn btn-success rounded-2" disabled="true">Accepted</button>
+    <% elsif booking.accepted == false %>
+      <button class="btn btn-danger rounded-2" disabled="true">Declined</button>
+    <% else booking.accepted = nil %>
+      <%= link_to "Accept", booking_path(booking, accepted: true), data: { turbo_method: :patch }, class:"btn btn-success rounded-2" %>
+      <%= link_to "Decline", booking_path(booking, accepted: false), data: { turbo_method: :patch }, class:"btn btn-danger rounded-2" %>
+    <% end %>
+  <% else %>
+    <% if booking.accepted.nil? %>
+      <p>Awaiting for answer</p>
+    <% else %>
+      <p>Status : <%= booking.accepted? ? "Accepted" : "Declined" %></p>
+    <% end %>
+  <% end %>
+</div>

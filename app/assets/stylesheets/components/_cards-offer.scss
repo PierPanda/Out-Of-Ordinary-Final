@@ -1,0 +1,37 @@
+.container-card {
+  margin-top: 15px;
+  font-size: 24px;
+  img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top -100px right 0px;
+  }
+}
+
+.cards-offer {
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  text-align: center;
+}
+
+.cards-offer {
+  h2 {
+  font-size: 32px;
+  font-weight: bold;
+  }
+  p {
+    font-size: 22px;
+    margin-left: 5px;
+  }
+}
+
+.card-offer {
+  background-size: cover;
+  background-position: center;
+}
+
+.card-offer > img{
+  background-size: cover;
+  background-position: center;
+}

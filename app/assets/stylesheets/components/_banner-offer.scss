@@ -1,0 +1,29 @@
+.banner-offer {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top -100px right 0px;
+  }
+}
+
+.banner-offer h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.banner-offer .banner-offer-infos {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+i{
+color: $text;
+}

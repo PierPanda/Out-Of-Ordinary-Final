@@ -1,0 +1,33 @@
+.card-booking {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-size: 24px;
+}
+
+.card-booking > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-booking h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-booking .card-booking-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.items-card > img {
+  height: 150px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}

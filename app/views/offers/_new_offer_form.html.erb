@@ -1,0 +1,16 @@
+<div class="container container-new d-flex justify-content-center">
+  <div class="feedback-form">
+    <h2 class="header text-center">New offer</h2>
+    <div>
+      <%= simple_form_for offer do |f| %>
+        <%= f.input :title, class:"mb-3 form-group" %>
+        <%= f.input :description, class:"mb-3 form-group" %>
+        <%= f.input :price, class:"mb-3 form-group" %>
+        <%= f.input :address, class:"mb-3 form-group" %>
+        <%= f.input :places, class:"mb-3 form-group" %>
+        <%= f.input :photo, as: :file, class:"mb-3 form-group" %>
+        <%= f.submit "Create", class:"text-center btn btn-ghost" %>
+      <% end %>
+    </div>
+  </div>
+</div>

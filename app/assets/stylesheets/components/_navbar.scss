@@ -1,0 +1,25 @@
+.navbar-lewagon {
+  justify-content: space-between;
+  background: $background;
+  position: sticky;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+.avatar{
+  width: 55px;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+  font-size: 24px;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 80px;
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}

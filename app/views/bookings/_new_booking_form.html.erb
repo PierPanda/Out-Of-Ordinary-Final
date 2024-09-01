@@ -1,0 +1,18 @@
+<div class="container d-flex justify-content-center" data-controller="total-price" data-total-price-price-value="<%= @offer.price%>">
+  <div class="feedback-form">
+    <h2 class="header text-center">Your Booking :</h2>
+    <div>
+      <%= simple_form_for [@offer, @booking] do |f| %>
+        <div class="form-inputs">
+          <%= f.input :number_of_persons, input_html: { data: { action: "input->total-price#calculateTotalPrice", total_price_target: "input" } } %>
+          <%= f.input :date_start, as: :string, input_html: { data: { controller: "datepicker", action: "input->total-price#calculateTotalPrice", total_price_target: "startDate" } } %>
+          <%= f.input :date_end, as: :string, input_html: { data: { controller: "datepicker", action: "input->total-price#calculateTotalPrice", total_price_target: "endDate" } } %>
+          <%= f.submit "Book", class:"text-center btn btn-ghost" %>
+        </div>
+        <div id="total_price" class = "mt-4 text-center">
+          Total Price: <span data-total-price-target= "totalPrice"></span>€
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

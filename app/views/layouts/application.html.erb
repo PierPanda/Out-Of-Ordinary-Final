@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OutOfOrdinary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon z-1">
+      <div class="container-fluid">
+        <%= link_to root_path, class: "navbar-brand" do %>
+          <%= image_tag "Out_of_ordinary.png" %>
+        <% end %>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <% if user_signed_in? %>
+              <li class="nav-item active">
+              </li>
+              <li class="nav-item dropdown">
+                <%= image_tag "user.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <%= link_to "Profil", "#", class: "dropdown-item" %>
+                  <%= link_to "Dashboard", dashboards_my_bookings_path, class: "dropdown-item" %>
+                  <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
+                </div>
+              </li>
+            <% else %>
+              <li class="nav-item">
+                <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <%= yield %>
+
+<footer>
+  <div class="footer">
+    <div class="footer-links">
+      <a href="https://avocat-droit-succession-cahen.fr/avant-prevoir/comment-rediger-un-testament-avec-un-avocat/"><i class="fa-solid fa-scale-balanced"></i></a>
+      <a href="https://www.youtube.com/watch?v=CwQfO8SV07I"><i class="fab fa-github"></i></a>
+      <a href="https://www.youtube.com/watch?v=fZfsE1rtkUQ"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/watch?v=tXnqrjZddcI"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.youtube.com/watch?v=i6wki3Y3n2A"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/watch?v=xXXMLeNdWeM"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="footer-copyright">
+      <% footer_motto = ["Vous avez signé votre testament ? Parfait, bienvenue chez nous !", "Pour ceux qui trouvent le saut en parachute trop mainstream.", "Adrenaline, frissons et un soupçon de folie – on ne garantit pas que vous reviendrez entier !", "Parce que la vie est trop courte pour rester en sécurité.", "Vous cherchez à mettre du piment dans votre vie ? On a de quoi enflammer votre quotidien.", "Votre mère vous a dit de ne jamais faire ça ? Nous, on vous encourage !", "Pour ceux qui veulent des souvenirs à raconter... s'ils reviennent pour les raconter.", "Ici, on prend le mot ‘insolite’ très au sérieux… et le mot ‘dangereux’ encore plus !", "On vous promet du fun, du danger, et peut-être même un passage aux urgences.", "Pourquoi vivre dangereusement quand on peut vivre dangereusement ET bizarrement ?", "Avertissement : nous ne sommes pas responsables des cris, des larmes ou des besoins soudains d'une nouvelle paire de sous-vêtements."] %>
+      © <%= footer_motto[rand(footer_motto.length)]%>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

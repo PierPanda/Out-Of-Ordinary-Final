@@ -1,0 +1,31 @@
+.btn-ghost {
+  color: white;
+  background-color: $primary;
+  padding: 8px 24px;
+  margin:auto;
+  border-radius: 15px;
+  font-weight: light;
+  font-size: 24px;
+  transition: opacity 0.3s ease;
+  align-items: center;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: white;
+  box-shadow: 10px 5px 5px $primary;
+}
+
+.btn-home {
+  color: white
+}
+
+.btn-home:hover {
+  box-shadow: 10px 5px 10px 0.5 $primary;
+  color: $text;
+  background-color:white ;
+}
+
+.btn-succes{
+  border-radius: 10px;
+}
